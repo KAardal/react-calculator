@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { concat } from "./action/key-actions.js";
 import RaisedButton from "material-ui/RaisedButton";
 
 class Key extends Component {
@@ -8,8 +10,14 @@ class Key extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    return;
+  //concat()
+
+  //evaluate()
+
+  //clear()
+
+  handleClick(e) {
+    this.props.concatKey(e.target.label);
   }
 
   render() {
@@ -17,4 +25,10 @@ class Key extends Component {
   }
 }
 
-export default Key;
+export const mapStateToProps = state => ({});
+
+export const mapDispatchToProps = dispatch => ({
+  concatKey: key => dispatch(concat(key))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Key);
