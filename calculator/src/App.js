@@ -1,6 +1,7 @@
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import "./App.css";
 import Row from "./Row.js";
 
@@ -10,7 +11,10 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <div className="display">
-            <TextField id="text-field-disabled" defaultValue="0" />
+            <TextField
+              id="text-field-disabled"
+              value={this.props.values ? this.props.values : "0"}
+            />
           </div>
           <Row labels={[7, 8, 9, "%"]} />
           <Row labels={[4, 5, 6, "X"]} />
@@ -22,4 +26,10 @@ class App extends Component {
   }
 }
 
-export default App;
+export const mapStateToProps = state => ({
+  values: state.keyValues
+});
+
+export const mapDispatchToProps = dispatch => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
