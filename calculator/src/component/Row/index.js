@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Key from "./Key.js";
+import Key from "./../Key";
 
 class Row extends Component {
   render() {

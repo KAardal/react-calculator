@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./reducer";
 import "./index.css";
-import App from "./App";
+import App from "./component/App";
 import registerServiceWorker from "./registerServiceWorker";
 
 class Main extends Component {

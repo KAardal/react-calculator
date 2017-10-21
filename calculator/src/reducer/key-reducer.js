@@ -7,6 +7,8 @@ export default (state = "", action) => {
       return eval(state);
     case "CLEAR":
       return "";
+    case "BACKSPACE":
+      return state.toString().slice(0, state.length - 1);
     default:
       return state;
   }
