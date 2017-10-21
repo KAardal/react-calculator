@@ -3,12 +3,14 @@ export const concat = keyValue => ({
   payload: keyValue
 });
 
-export const evaluate = keyValue => ({
-  type: "EVAL",
-  payload: keyValue
+export const evaluate = () => ({
+  type: "EVAL"
 });
 
-export const clear = keyValue => ({
-  type: "CLEAR",
-  payload: keyValue
+export const clear = () => ({
+  type: "CLEAR"
+});
+
+export const backspace = () => ({
+  type: "BACKSPACE"
 });
