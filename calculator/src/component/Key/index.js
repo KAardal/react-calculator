@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
-  concat,
-  evaluate,
   clear,
-  backspace
+  concat,
+  square,
+  percent,
+  evaluate,
+  negative,
+  backspace,
+  squareRoot
 } from "./../../action/key-actions.js";
 import RaisedButton from "material-ui/RaisedButton";
 
@@ -21,9 +25,13 @@ class Key extends Component {
   }
 
   handleClick(e) {
-    if (e.target.textContent === "=") return this.props.evaluate();
     if (e.target.textContent === "CL") return this.props.clear();
+    if (e.target.textContent === "^2") return this.props.square();
+    if (e.target.textContent === "%") return this.props.percent();
+    if (e.target.textContent === "=") return this.props.evaluate();
     if (e.target.textContent === "<=") return this.props.backspace();
+    if (e.target.textContent === "-/+") return this.props.negative();
+    if (e.target.textContent === "sqr") return this.props.squareRoot();
     this.props.concatKey(e.target.textContent);
   }
 
@@ -44,10 +52,14 @@ class Key extends Component {
 export const mapStateToProps = state => ({});
 
 export const mapDispatchToProps = dispatch => ({
-  concatKey: key => dispatch(concat(key)),
-  evaluate: () => dispatch(evaluate()),
   clear: () => dispatch(clear()),
-  backspace: () => dispatch(backspace())
+  square: () => dispatch(square()),
+  percent: () => dispatch(percent()),
+  evaluate: () => dispatch(evaluate()),
+  negative: () => dispatch(negative()),
+  backspace: () => dispatch(backspace()),
+  concatKey: key => dispatch(concat(key)),
+  squareRoot: () => dispatch(squareRoot())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Key);

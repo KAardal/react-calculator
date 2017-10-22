@@ -14,3 +14,19 @@ export const clear = () => ({
 export const backspace = () => ({
   type: "BACKSPACE"
 });
+
+export const square = () => ({
+  type: "SQUARE"
+});
+
+export const negative = () => ({
+  type: "NEGATIVE"
+});
+
+export const percent = () => ({
+  type: "PERCENT"
+});
+
+export const squareRoot = () => ({
+  type: "SQUAREROOT"
+});

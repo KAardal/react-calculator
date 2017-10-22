@@ -43,7 +43,8 @@ class App extends Component {
                 style={textFieldStyles}
               />
             </div>
-            <Row labels={["CL", "<=", "(", ")"]} />
+            <Row labels={["CL", "sqr", "^2", "-/+"]} />
+            <Row labels={["<=", "(", ")", "%"]} />
             <Row labels={["7", "8", "9", "/"]} />
             <Row labels={["4", "5", "6", "*"]} />
             <Row labels={["1", "2", "3", "-"]} />
