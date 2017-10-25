@@ -1,13 +1,10 @@
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
 import TextField from "material-ui/TextField";
 import Paper from "material-ui/Paper";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import Row from "./../Row";
-
-const muiTheme = getMuiTheme({});
 
 const paperStyles = {
   backgroundColor: "#9e9e9e",
@@ -43,7 +40,8 @@ class App extends Component {
                 style={textFieldStyles}
               />
             </div>
-            <Row labels={["CL", "<=", "(", ")"]} />
+            <Row labels={["CL", "sqr", "^2", "-/+"]} />
+            <Row labels={["<=", "(", ")", "%"]} />
             <Row labels={["7", "8", "9", "/"]} />
             <Row labels={["4", "5", "6", "*"]} />
             <Row labels={["1", "2", "3", "-"]} />
