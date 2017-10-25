@@ -1,13 +1,10 @@
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
 import TextField from "material-ui/TextField";
 import Paper from "material-ui/Paper";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./App.css";
 import Row from "./../Row";
-
-const muiTheme = getMuiTheme({});
 
 const paperStyles = {
   backgroundColor: "#9e9e9e",

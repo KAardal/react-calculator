@@ -28,10 +28,10 @@ class Key extends Component {
     if (e.target.textContent === "CL") return this.props.clear();
     if (e.target.textContent === "^2") return this.props.square();
     if (e.target.textContent === "%") return this.props.percent();
-    if (e.target.textContent === "=") return this.props.evaluate();
     if (e.target.textContent === "<=") return this.props.backspace();
     if (e.target.textContent === "-/+") return this.props.negative();
     if (e.target.textContent === "sqr") return this.props.squareRoot();
+    if (e.target.textContent === "=") return this.props.evaluate();
     this.props.concatKey(e.target.textContent);
   }
 
